@@ -67,7 +67,7 @@ class App extends Component {
           </video>
           <Search getVenues={this.getVenues}/>        
         </div>
-        <div>
+        <div style={{marginTop:20}}>
           <VenueList venues={venues}/>
         </div>
       </div>

@@ -14,7 +14,7 @@ const VenueList = ({venues}) =>{
   <Grid
   className='venueList' 
   container 
-  spacing={8}
+  spacing={16}
   direction="row"
   justify="center"
   alignItems="center"
