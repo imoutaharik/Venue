@@ -28,7 +28,7 @@ class Search extends Component {
           id="searchinput"
           label="Search Venue"
           type="search"
-          style={{width:'60%',marginRight:'theme.spacing.unit', marginLeft:'theme.spacing.unit'}}
+          style={{width:'60%',marginRight:'theme.spacing.unit', marginLeft:'theme.spacing.unit', backgroundColor:'#fff !important'}}
           margin="normal"
           variant="filled"
         />
