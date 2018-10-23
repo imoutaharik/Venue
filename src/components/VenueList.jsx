@@ -23,7 +23,7 @@ const VenueList = ({venues}) =>{
     
       {venues.map((v,i)=> 
       <Grid item xs={12} md={6} lg={3}>
-      <Card key={i} style={{height:220}}>
+      <Card key={i} style={{minHeight:220}}>
          <CardActionArea>
            <CardContent>
              <Typography style={{textAlign:'left'}} gutterBottom variant="h5" component="h2">
