@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 
 const VenueList = ({venues}) =>{
   return(
-    <div style={{display:'flex', flexWrap:'wrap', margin:'0 auto'}}>
+    <div style={{display:'flex', flexWrap:'wrap', margin:'0 auto', width:'80%'}}>
       {venues.map((v,i)=> <Card key={i} style={{maxWidth: 345, width:300, margin:15}}>
          <CardActionArea>
            <CardMedia

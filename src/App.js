@@ -43,8 +43,15 @@ class App extends Component {
   render() {
     const {venues} = this.state
     return (
-      <div>
-        <Search getVenues={this.getVenues}/>
+      <div style={{textAlign:'center'}}>
+        <div>
+          <video className='video-background' autoPlay muted loop>
+            <source src="https://res.cloudinary.com/dtawbk4r1/video/upload/v1540311789/Profile_pictures/Coffee-Shot.mp4" type="video/mp4"/>
+          </video>
+          <div>
+            <Search getVenues={this.getVenues}/>
+          </div>          
+        </div>
         <VenueList venues={venues}/>
       </div>
     );
