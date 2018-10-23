@@ -37,6 +37,7 @@ class App extends Component {
     axios.get(url + new URLSearchParams(params))
     .then(res =>{
       this.setState({venues:res.data.response.groups[0].items})
+      console.log(this.state.venues)
     })
   }
 

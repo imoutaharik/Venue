@@ -25,3 +25,10 @@
 .MuiInputBase-input-42{
   background:#fff!important;
 }
+.share-btn{
+  padding: 5px;
+  background: #f50057;
+  color: white;
+  border: none;
+  border-radius: 5px
+}

@@ -5,6 +5,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button'
 import { FacebookProvider, ShareButton } from 'react-facebook';
 
 const VenueList = ({venues}) =>{
@@ -12,11 +13,6 @@ const VenueList = ({venues}) =>{
     <div style={{display:'flex', flexWrap:'wrap', margin:'0 auto', width:'80%', marginTop:20}}>
       {venues.map((v,i)=> <Card key={i} style={{maxWidth: 345, width:300, margin:15}}>
          <CardActionArea>
-           <CardMedia
-             style={{height:140}}
-             image='https://hlfppt.org/wp-content/uploads/2017/04/placeholder.png'
-             title={v.venue.name}
-           />
            <CardContent>
              <Typography style={{textAlign:'left'}} gutterBottom variant="h5" component="h2">
                {v.venue.name}
@@ -33,8 +29,9 @@ const VenueList = ({venues}) =>{
          </CardActionArea>
          <CardActions>
           <FacebookProvider appId="2662900933935218">
-            <ShareButton href={'https://foursquare.com/v/' + v.venue.id}>Share</ShareButton>
+            <ShareButton className='share-btn' href={'https://foursquare.com/v/' + v.venue.id}>Share</ShareButton>
           </FacebookProvider>
+          <Button size="small">Learn More</Button>
          </CardActions>
        </Card> )}
       </div>
