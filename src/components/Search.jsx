@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 class Search extends Component {
   state={
@@ -16,10 +18,23 @@ class Search extends Component {
   
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
-        <input onChange={this.onChange} type="text" placeholder='search venue' name='searchInput' id='searchinput'/>
-        <button type='submit' >Search</button>
+      <div className='searchdiv'>
+        <form onSubmit={this.onSubmit}>
+        <h1>Venue</h1>
+        <h3>Find the best places to eat, drink near you!</h3>
+        <TextField
+          onChange={this.onChange}
+          name='searchInput'
+          id="searchinput"
+          label="Search Venue"
+          type="search"
+          style={{width:'60%',marginRight:'theme.spacing.unit', marginLeft:'theme.spacing.unit'}}
+          margin="normal"
+          variant="filled"
+        />
+        <Button type='submit' variant="contained" color="secondary" style={{marginRight:'theme.spacing.unit', marginLeft:'10px', marginTop:'24px',marginBottom:'8px'}}>Search</Button>
       </form>
+      </div>
     );
   }
 }
