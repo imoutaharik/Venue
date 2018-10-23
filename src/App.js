@@ -65,11 +65,11 @@ class App extends Component {
           <video className='video-background' autoPlay muted loop>
             <source src="https://res.cloudinary.com/dtawbk4r1/video/upload/v1540311789/Profile_pictures/Coffee-Shot.mp4" type="video/mp4"/>
           </video>
-          <div>
-            <Search getVenues={this.getVenues}/>
-          </div>          
+          <Search getVenues={this.getVenues}/>        
         </div>
-        <VenueList venues={venues}/>
+        <div>
+          <VenueList venues={venues}/>
+        </div>
       </div>
     );
   }
