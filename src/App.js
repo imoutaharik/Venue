@@ -19,7 +19,7 @@ class App extends Component {
       this.setState({
         coordinates: response.coords.latitude+','+response.coords.longitude
       }, ()=>{
-        this.getVenues('sushi')
+        this.getVenues()
       })
     })
   }
@@ -36,6 +36,7 @@ class App extends Component {
     axios.get(url + new URLSearchParams(params))
     .then(res =>{
       this.setState({venues:res.data.response.groups[0].items})
+      console.log({venues:res.data.response.groups[0].items})
     })
   }
 

@@ -1,12 +1,41 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
+
 
 const VenueList = ({venues}) =>{
-
   return(
-    <div>
-        <ul>
-        {venues.map((v,i)=> <li key={i}>{v.venue.name} <br/> Location : {v.venue.location.address}</li>)}
-        </ul>
+    <div style={{display:'flex', flexWrap:'wrap', margin:'0 auto'}}>
+      {venues.map((v,i)=> <Card key={i} style={{maxWidth: 345, width:300, margin:15}}>
+         <CardActionArea>
+           <CardMedia
+             style={{height:140}}
+             image=''
+             title="Contemplative Reptile"
+           />
+           <CardContent>
+             <Typography gutterBottom variant="h5" component="h2">
+               {v.venue.name}
+             </Typography>
+             <Typography component="p">
+               Address : {v.venue.location.formattedAddress[0]}
+               <br/>
+               Distance : {v.venue.location.distance} m
+             </Typography>
+             <Typography component="p">
+               Category : {v.venue.categories[0].name}
+             </Typography>
+           </CardContent>
+         </CardActionArea>
+         <CardActions>
+         </CardActions>
+       </Card> )}
       </div>
 )}
 
