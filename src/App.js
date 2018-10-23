@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios'
 import VenueList from '../src/components/VenueList';
+import Search from './components/Search';
 
 class App extends Component {
   state={
@@ -35,7 +36,6 @@ class App extends Component {
     axios.get(url + new URLSearchParams(params))
     .then(res =>{
       this.setState({venues:res.data.response.groups[0].items})
-      console.log(this.state)
     })
   }
 
@@ -43,6 +43,7 @@ class App extends Component {
     const {venues} = this.state
     return (
       <div>
+        <Search getVenues={this.getVenues}/>
         <VenueList venues={venues}/>
       </div>
     );
