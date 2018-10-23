@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios'
+import VenueList from '../src/components/VenueList';
 
 class App extends Component {
   state={
@@ -39,11 +40,10 @@ class App extends Component {
   }
 
   render() {
+    const {venues} = this.state
     return (
       <div>
-        <ul>
-        {this.state.venues.map((v,i)=> <li key={i}>{v.venue.name}</li>)}
-        </ul>
+        <VenueList venues={venues}/>
       </div>
     );
   }
