@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:700');
+@import url('https://fonts.googleapis.com/css?family=Heebo:900');
+.App {
+  font-family: 'Lato', sans-serif;
+}
 
 .video-background {
   margin-top: -500px;
@@ -14,6 +19,8 @@
 }
 .searchdiv h1{
   font-size: 4em;
+  font-family: 'Heebo', sans-serif;
+  margin:5px;
 }
 .MuiInputBase-input-42{
   background:#fff!important;

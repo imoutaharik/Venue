@@ -43,7 +43,7 @@ class App extends Component {
   render() {
     const {venues} = this.state
     return (
-      <div style={{textAlign:'center'}}>
+      <div className='App' style={{textAlign:'center'}}>
         <div>
           <video className='video-background' autoPlay muted loop>
             <source src="https://res.cloudinary.com/dtawbk4r1/video/upload/v1540311789/Profile_pictures/Coffee-Shot.mp4" type="video/mp4"/>

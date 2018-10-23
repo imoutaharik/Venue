@@ -20,15 +20,15 @@ const VenueList = ({venues}) =>{
              title="Contemplative Reptile"
            />
            <CardContent>
-             <Typography gutterBottom variant="h5" component="h2">
+             <Typography style={{textAlign:'left'}} gutterBottom variant="h5" component="h2">
                {v.venue.name}
              </Typography>
-             <Typography component="p">
+             <Typography style={{textAlign:'left'}}  component="p">
                Address : {v.venue.location.formattedAddress[0]}
                <br/>
                Distance : {v.venue.location.distance} m
              </Typography>
-             <Typography component="p">
+             <Typography style={{textAlign:'left'}}  component="p">
                Category : {v.venue.categories[0].name}
              </Typography>
            </CardContent>
