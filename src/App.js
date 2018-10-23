@@ -7,7 +7,8 @@ import Search from './components/Search';
 class App extends Component {
   state={
     coordinates:'',
-    venues:[]
+    venues:[],
+    venueDetail:[]
   }
 
   componentDidMount(){
@@ -36,9 +37,24 @@ class App extends Component {
     axios.get(url + new URLSearchParams(params))
     .then(res =>{
       this.setState({venues:res.data.response.groups[0].items})
-      console.log({venues:res.data.response.groups[0].items})
     })
   }
+
+  getVenueDetail = (id) =>{
+    const url = 'https://api.foursquare.com/v2/venues/';
+    const params = {
+      client_id:'MANRL0YHN23ZJOZTG4XRCMSM3NDYRP4VLX5SAN1T3YBQBXIZ',
+      client_secret:'ZXKSYHN5UBUH0AUY0CY1QJT3BVTYW2SGHSSV5B4UARX52ZYA',
+      v:"20181022"
+    }
+    axios.get(url + id + '?' + new URLSearchParams(params))
+    .then(res =>{
+      this.setState({venueDetail : res.data.response.venue})
+      console.log(this.state.venueDetail)
+    })
+  }
+
+
 
   render() {
     const {venues} = this.state
