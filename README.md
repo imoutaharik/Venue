@@ -25,21 +25,11 @@ Frameworks and libraries used in this project :
 
 Information given : 
 
-1- Name of the venue
-2- Address
-3- Distance
-4- Category
+- Name of the venue
+- Address
+- Distance
+- Category
 
 -------------------------------------------------
-
-Technical info : 
-
-Frameworks and libraries used in this project : 
-
-- Reactjs
-- Material UI
-- React-facebook
-
-
 Enjoy the app!
 
